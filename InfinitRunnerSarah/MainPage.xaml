@@ -1,10 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="InfinitRunnerSarah.MainPage">
+             x:Class="InfinitRunnerSarah.MainPage"
+             Shell.NavBarIsVisible="false"
+             BackgroundColor="White">
 
-             <Grid>
-             <Image Source="fundo2.jpg"/>
-             <Image Source="fundo1.jpg"/>
-             </Grid>
+    <Grid>
+        <HorizontalStackLayout x:Name="HsLayer1">
+            <Image Source="ceu2.jpg"/>
+            <Image Source="ceu2.jpg"/>
+            <Image Source="ceu2.jpg"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="HsLayer2">
+            <Image Source="predio.png"/>
+            <Image Source="predio.png"/>
+            <Image Source="predio.png"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="HsLayer3">
+            <Image Source="mato.png"/>
+            <Image Source="mato.png"/>
+            <Image Source="mato.png"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="HsLayer4Chao"
+            HeightRequest="50"
+            VerticalOptions="End">
+            <Image Source="chao.png"/>
+            <Image Source="chao.png"/>
+            <Image Source="chao.png"/>
+        </HorizontalStackLayout>
+    </Grid>
 </ContentPage>
