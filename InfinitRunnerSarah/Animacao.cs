@@ -1,5 +1,7 @@
 namespace InfinitRunnerSarah;
+    
 public class Animacao
+{
 	{
 		protected List<String> Animacao1 = new List<String>();
 		protected List<String> Animacao2 = new List<String>();
@@ -47,6 +49,7 @@ public class Animacao
                 QuandoParar();
             }
         }
+    }
         public virtual void QuandoParar()
         {
 
