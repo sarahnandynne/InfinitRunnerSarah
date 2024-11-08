@@ -11,17 +11,20 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int LarguraJanela = 0;
 	int AlturaJanela = 0;
+	Player player;
 
 	public MainPage()
 	{
 		InitializeComponent();
+		player = new Player(Personagem);
+		player.Run();
 	}
-    protected override void OnSizeAllocated(double width, double height)
-    {
-        base.OnSizeAllocated(width, height);
+	protected override void OnSizeAllocated(double width, double height)
+	{
+		base.OnSizeAllocated(width, height);
 		CorrigeTamanhoCenario(width, height);
 		CalculaVelocidade(width);
-    }
+	}
 	void CalculaVelocidade(double width)
 	{
 		velocidade1 = (int)(width * 0.001);
@@ -32,13 +35,13 @@ public partial class MainPage : ContentPage
 	void CorrigeTamanhoCenario(double width, double height)
 	{
 		foreach (var ceu in HsLayer1.Children)
-		(ceu as Image).WidthRequest = width;
+			(ceu as Image).WidthRequest = width;
 		foreach (var predio in HsLayer2.Children)
-		(predio as Image).WidthRequest = width;
+			(predio as Image).WidthRequest = width;
 		foreach (var mato in HsLayer3.Children)
-		(mato as Image).WidthRequest = width;
+			(mato as Image).WidthRequest = width;
 		foreach (var chao in HsLayer4Chao.Children)
-		(chao as Image).WidthRequest = width;
+			(chao as Image).WidthRequest = width;
 
 		HsLayer1.WidthRequest = width;
 		HsLayer2.WidthRequest = width;
@@ -77,6 +80,7 @@ public partial class MainPage : ContentPage
 		while (!EstaMorto)
 		{
 			GerenciaCenarios();
+			player.Desenha();
 			await Task.Delay(TempoEntreFrames);
 		}
 	}
@@ -85,6 +89,6 @@ public partial class MainPage : ContentPage
 		base.OnAppearing();
 		Desenha();
 	}
-	
+
 }
 

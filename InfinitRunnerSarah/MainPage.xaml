@@ -5,60 +5,62 @@
              Shell.NavBarIsVisible="false"
              BackgroundColor="White">
 
-    <Grid>
-        <HorizontalStackLayout x:Name="HsLayer1">
-            <Image Source="ceu2.jpg"
-                   VerticalOptions="Fill"
-                   Aspect="Fill"/>
-            <Image Source="ceu2.jpg"
-                   VerticalOptions="Fill"
-                   Aspect="Fill"/>
-            <Image Source="ceu2.jpg"
-                   VerticalOptions="Fill"
-                   Aspect="Fill"/>
-        </HorizontalStackLayout>
+       <Grid>
+              <HorizontalStackLayout x:Name="HsLayer1">
+                     <Image Source="ceu2.jpg"
+                            VerticalOptions="Fill"
+                            Aspect="Fill"/>
+                     <Image Source="ceu2.jpg"
+                            VerticalOptions="Fill"
+                            Aspect="Fill"/>
+                     <Image Source="ceu2.jpg"
+                            VerticalOptions="Fill"
+                            Aspect="Fill"/>
+              </HorizontalStackLayout>
 
-        <HorizontalStackLayout x:Name="HsLayer2">
-            <Image Source="predio.png"
-                   VerticalOptions="Fill"
-                   Aspect="Fill"/>
-            <Image Source="predio.png"
-                   VerticalOptions="Fill"
-                   Aspect="Fill"/>
-            <Image Source="predio.png"
-                   VerticalOptions="Fill"
-                   Aspect="Fill"/>
-        </HorizontalStackLayout>
+              <HorizontalStackLayout x:Name="HsLayer2">
+                     <Image Source="predio.png"
+                            VerticalOptions="Fill"
+                            Aspect="Fill"/>
+                     <Image Source="predio.png"
+                            VerticalOptions="Fill"
+                            Aspect="Fill"/>
+                     <Image Source="predio.png"
+                            VerticalOptions="Fill"
+                            Aspect="Fill"/>
+              </HorizontalStackLayout>
 
-        <HorizontalStackLayout x:Name="HsLayer3">
-            <Image Source="mato.png"
-                   VerticalOptions="Fill"
-                   Aspect="Fill"/>
-            <Image Source="mato.png"
-                   VerticalOptions="Fill"
-                   Aspect="Fill"/>
-            <Image Source="mato.png"
-                   VerticalOptions="Fill"
-                   Aspect="Fill"/>
-        </HorizontalStackLayout>
+              <HorizontalStackLayout x:Name="HsLayer3">
+                     <Image Source="mato.png"
+                            VerticalOptions="Fill"
+                            Aspect="Fill"/>
+                     <Image Source="mato.png"
+                            VerticalOptions="Fill"
+                            Aspect="Fill"/>
+                     <Image Source="mato.png"
+                            VerticalOptions="Fill"
+                            Aspect="Fill"/>
+              </HorizontalStackLayout>
 
-        <HorizontalStackLayout x:Name="HsLayer4Chao"
-                               VerticalOptions="End">
-            <Image Source="chao.png"
-                   HeightRequest="130"
-                   VerticalOptions="End"
-                   Aspect="AspectFill"
-                   HorizontalOptions="Fill"/>
-            <Image Source="chao.png"
-                   HeightRequest="130"
-                   VerticalOptions="End"
-                   Aspect="AspectFill"
-                   HorizontalOptions="Fill"/>
-            <Image Source="chao.png"
-                   HeightRequest="130"
-                   VerticalOptions="End"
-                   Aspect="AspectFill"
-                   HorizontalOptions="Fill"/>
-        </HorizontalStackLayout>
-    </Grid>
+              <HorizontalStackLayout x:Name="HsLayer4Chao"
+                                     VerticalOptions="End">
+                     <Image Source="chao.png"
+                            HeightRequest="130"
+                            VerticalOptions="End"
+                            Aspect="AspectFill"
+                            HorizontalOptions="Fill"/>
+                     <Image Source="chao.png"
+                            HeightRequest="130"
+                            VerticalOptions="End"
+                            Aspect="AspectFill"
+                            HorizontalOptions="Fill"/>
+                     <Image Source="chao.png"
+                            HeightRequest="130"
+                            VerticalOptions="End"
+                            Aspect="AspectFill"
+                            HorizontalOptions="Fill"/>
+              </HorizontalStackLayout>
+
+              <Image x:Name="Personagem"/>
+       </Grid>
 </ContentPage>
