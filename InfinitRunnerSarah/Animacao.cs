@@ -1,18 +1,19 @@
+using FFImageLoading.Maui;
+
 namespace InfinitRunnerSarah;
 
 public class Animacao
 {
-{
-	protected List<String> Animacao1 = new List<String>();
+    protected List<String> Animacao1 = new List<String>();
     protected List<String> Animacao2 = new List<String>();
     protected List<String> Animacao3 = new List<String>();
     protected bool loop = true;
     protected int AnimacaoAtiva = 1;
     bool Parado = true;
     int FrameAtual = 1;
-    protected Image compImage;
-}
-public Animacao(Image a)
+    protected CachedImageView ImageView;
+
+public Animacao(CachedImageView a)
 {
     compImage = a;
 }
@@ -66,4 +67,4 @@ public void SetAnimacaoAtiva(int a)
 {
     AnimacaoAtiva = a;
 }
-	}
+}
