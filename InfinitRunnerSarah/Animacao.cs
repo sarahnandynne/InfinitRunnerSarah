@@ -15,7 +15,7 @@ public class Animacao
 
 public Animacao(CachedImageView a)
 {
-    compImage = a;
+    ImageView = a;
 }
 public void Desenha()
 {
@@ -38,7 +38,7 @@ public void Desenha()
         NomeArquivo = Animacao3[FrameAtual];
         TamanhoAnimacao = Animacao3.Count;
     }
-    compImage.Source = ImageSource.FromFile(NomeArquivo);
+    ImageView.Source = ImageSource.FromFile(NomeArquivo);
     FrameAtual++;
     if (FrameAtual >= TamanhoAnimacao)
     {
