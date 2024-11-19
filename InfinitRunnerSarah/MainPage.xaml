@@ -7,6 +7,10 @@
              BackgroundColor="White">
 
        <Grid>
+       <Grid.GestureRecognizers>
+                     <TapGestureRecognizer Tapped="OnGridTapped"/>
+       </Grid.GestureRecognizers>
+
               <HorizontalStackLayout x:Name="HsLayer1">
                      <Image Source="ceu2.jpg"
                             VerticalOptions="Fill"

@@ -11,6 +11,14 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int LarguraJanela = 0;
 	int AlturaJanela = 0;
+	const int ForcaGravidade = 6;
+	bool EstaNoChao = true;
+	bool EstaNoAr = false;
+	int TempoPulando = 0;
+	int TempoNoAr = 0;
+	const int ForcaPulo = 12;
+	const int MaxTempoPulando = 6;
+	const int MaxTempoNoAr = 4;
 	Player player;
 
 	public MainPage()
@@ -80,7 +88,13 @@ public partial class MainPage : ContentPage
 		while (!EstaMorto)
 		{
 			GerenciaCenarios();
-			player.Desenha();
+			if (!EstaPulando && !EstaNoAr)
+			{
+				AplicaGravidade();
+				player.Desenha();
+			}
+			else 
+			AplicaPulo();
 			await Task.Delay(TempoEntreFrames);
 		}
 	}
@@ -90,5 +104,47 @@ public partial class MainPage : ContentPage
 		Desenha();
 	}
 
+	void AplicaGravidade()
+	{
+		if(player.GetY()<0)
+		player.MoveY(ForcaGravidade);
+		else if(player.GetY()>=0)
+		{
+			player.SetY(0);
+			EstaNoChao = true;
+		}
+	}
+
+	void AplicaPulo()
+	{
+		EstaNoChao = false;
+		if(EstaPulando && TempoPulando >= MaxTempoPulando)
+		{
+			EstaPulando = false;
+			EstaNoAr = true;
+			TempoNoAr = 0;
+		}
+		else if(EstaNoAr && TempoNoAr >= MaxTempoNoAr)
+		{
+			EstaPulando = false;
+			EstaNoAr = false;
+			TempoNoAr = 0;
+			TempoPulando = 0;
+		}
+		else if (EstaPulando && TempoPulando < MaxTempoPulando)
+		{
+			player.MoveY(-ForcaPulo);
+			TempoPulando++;
+		}
+		else if(EstaNoAr)
+		TempoNoAr++;
+	}
+
+	
+	void OnGridTapped (object a, TappedEventArgs b)
+	{
+		if (EstaNoChao)
+		EstaPulando = true;
+	}
 }
 
